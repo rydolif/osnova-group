@@ -7,7 +7,7 @@
 		$phone = htmlspecialchars(trim($_POST['phone']));
 		$mail = htmlspecialchars(trim($_POST['mail']));
 		$subject = $_POST['subject'] ? htmlspecialchars(trim($_POST['subject'])) : '';
-		$to = 'lavrinenko1589@mail.ru';
+		$to = 'info@ogmsk.ru';
 
 		$headers = "From: $SITE_TITLE \r\n";
 		$headers .= "Reply-To: ". $email . "\r\n";
