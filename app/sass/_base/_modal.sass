@@ -8,6 +8,15 @@
 	z-index: 1
 	transform: scale(0.8)
 
+	h3, p
+		text-align: center
+
+	h3
+		margin-bottom: 5px
+	
+	p
+		margin-bottom: 10px
+
 	&__close
 		position: absolute
 		right: 15px
@@ -19,23 +28,23 @@
 		border: none
 		cursor: pointer
 		transition: all .6s
-		border: 2px solid $accent
+		border: 2px solid #d25e5e
 		border-radius: 50%
 
 		&:hover, &:focus
 			outline: none
 			transform: rotate(90deg)
-			border-color: #d25e5e
+			border-color: $red
 
 			span
-				background-color: #d25e5e
+				background-color: $red
 
 		span
 			display: block
 			position: absolute
 			left: 50%
 			top: 50%
-			background: $accent
+			background: #d25e5e
 			transition: all .6s
 			border-radius: 4px
 			height: 18px

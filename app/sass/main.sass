@@ -38,7 +38,54 @@
 	color: #e6e7eb
 	transform: translate(-20%, -70%) rotate(-90deg)
 	font-weight: 700
-	
+
+.up
+	position: fixed
+	right: 40px
+	bottom: -100px
+	transition: all .6s
+	z-index: 1001
+
+	&--active
+		bottom: 30px
+
+	a
+		display: block
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		background-color: $accent
+		box-shadow: 0 0 20px rgba($text, 1)
+
+		&:hover
+			span
+				top: 40%
+
+	span
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		height: 25px
+		width: 3px
+		background-color: #fff
+		transition: all .6s
+
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: -6px
+			width: 15px
+			height: 15px
+			border-top: 3px solid #fff
+			border-left: 3px solid #fff
+			transform: rotate(45deg)
+
+.main
+	overflow: hidden
+
 
 .header
 	padding: 15px 0
@@ -219,6 +266,58 @@
 		&:last-child
 			margin-bottom: 0
 
+	&__info
+		opacity: 0
+		position: absolute
+		top: 0px
+		background-color: rgba($accent, .75)
+		padding: 65px 40px
+		z-index: 1
+		margin-right: 65px
+		transition: all .6s
+
+		&:last-child
+			margin-bottom: 0
+
+		h4, ol
+			color: $red
+			text-transform: uppercase
+			font-style: italic
+			line-height: 2
+			font-weight: 700
+
+
+		ol, ul
+			padding-left: 30px
+			margin-bottom: 15px
+
+			&:last-child
+				margin-bottom: 0
+
+			ol
+				text-transform: none
+				font-style: normal
+				color: #fff
+				font-weight: 400
+				padding-left: 0
+
+				li
+					position: relative
+
+					&::before
+						color: #fff
+						content: counter(wslist2) "."
+						counter-increment: wslist2
+						display: inline-block
+						left: -25px
+						position: absolute
+						text-align: center
+						top: 0
+
+		&--active
+			opacity: 1
+			top: 70px
+
 	&__btn
 		margin-bottom: 80px
 
@@ -290,6 +389,10 @@
 				right: auto
 				left: 0
 				bottom: 0
+
+			&__info
+				margin-right: auto
+				margin-left: 70px
 
 		h2
 			margin-bottom: 30px
@@ -380,9 +483,23 @@
 
 		p
 			margin-bottom: 25px
+			display: flex
+			align-items: center
 
 			&:last-child
 				margin-bottom: 0
+
+			a
+				margin-right: 15px
+
+				&:hover,
+				&:focus
+					img
+						transform: scale(.8)
+
+			img
+				transition: all .6s
+
 
 	&__btn
 		border: 1px solid $accent
