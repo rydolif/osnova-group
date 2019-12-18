@@ -1,0 +1,415 @@
+@import "libs"
+@import "base"
+
+
+.container
+	position: relative
+	max-width: 1440px
+	width: 100%
+	margin: 0 auto
+	padding: 0 15px
+
+.col
+	position: absolute
+	top: 0
+	background-color: #e1e1e1
+	width: 1px
+	height: 100%
+	z-index: -1
+
+	&:nth-child(1)
+		left: 15px
+
+	&:nth-child(2)
+		left: 34%
+
+	&:nth-child(3)
+		left: 68%
+
+	&:nth-child(4)
+		right: 15px
+
+
+.sub-title
+	position: absolute
+	font-family: $title
+	font-size: 24px
+	text-transform: uppercase
+	color: #e6e7eb
+	transform: translate(-20%, -70%) rotate(-90deg)
+	font-weight: 700
+	
+
+.header
+	padding: 15px 0
+	background-color: #fff
+	box-shadow: 0 0 5px 0 rgba(#555555, .6)
+
+	&__container
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__logo
+		display: flex
+		align-items: flex-end
+
+
+.hero
+	background-image: url(../img/hero.png)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	padding: 
+		top: 170px
+		bottom: 180px
+
+	&__container
+		display: flex
+		flex-wrap: wrap
+
+
+	ul
+		padding-left: 50px
+		border-left: 1px solid $accent
+		margin-top: 20px
+		
+	li
+		margin-bottom: 40px
+		transition: all .6s
+		max-width: 380px
+
+		&:hover,
+		&:focus
+			margin-left: 85px
+
+		&:last-child
+			margin-bottom: 0
+
+	a
+		position: relative
+		display: block
+		font-family: $title
+		font-weight: 500
+		line-height: 1.9
+		transition: all .6s
+
+		&:hover,
+		&:focus
+			span
+				opacity: 1
+
+	span
+		position: absolute
+		left: 105%
+		top: 50%
+		transform: translate(0, -50%)
+		display: block
+		width: 65px
+		height: 65px
+		border-radius: 50%
+		background-color: #fff
+		opacity: 0
+		transition: all .6s
+
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-20%, -50%)
+			width: 20px
+			height: 20px
+			border-bottom: 13px solid transparent
+			border-left: 20px solid $red
+			border-right: 20px solid transparent
+			border-top: 13px solid transparent
+			
+
+.info
+	
+	&__container
+		padding: 
+			top: 20px
+			bottom: 195px
+
+	&__sub-title
+		left: 0
+		bottom: 190px
+
+
+	&__list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	&__item
+		position: relative
+		width: 50%
+		line-height: 1.5
+
+		img
+			position: absolute
+
+		&:nth-child(odd)
+			text-align: right
+
+		&:nth-child(1)
+			padding-right: 285px
+			margin-left: 26%
+
+			img
+				top: -70px
+				right: 0
+
+			
+		&:nth-child(2)
+			padding:
+				left: 120px
+				top: 130px
+			
+			img
+				left: 0
+				top: 0
+
+			h3
+				padding-left: 30px
+
+			
+		&:nth-child(3)
+			margin-bottom: 105px
+			padding:
+				right: 300px
+				top: 160px
+
+			img
+				top: 100px
+				right: 5px
+
+			
+		&:nth-child(4)
+			margin-left: 25.5%
+			padding-left: 170px
+
+			img
+				left: -5px
+				top: 5px
+
+
+.step
+
+	p
+		margin-bottom: 80px
+	
+	b
+		font-style: italic
+
+
+	ul
+		margin-bottom: 85px
+
+		span
+			text-transform: uppercase
+			color: $red
+
+	li
+		margin-bottom: 10px
+
+		&:last-child
+			margin-bottom: 0
+
+	&__btn
+		margin-bottom: 80px
+
+	&__sub-title
+		right: -25px
+		bottom: 140px
+
+	&__container
+		display: flex
+		justify-content: space-between
+		padding-bottom: 190px
+
+	&__col
+		position: relative
+		width: 50%
+
+	&__img
+		position: absolute
+		right: 85px
+		top: 110px
+
+	&__number
+		font-size: 43px
+		color: #e5e6ea
+		font-weight: 800
+		letter-spacing: 1px
+		text-align: right
+		font-family: $title
+		margin-right: 155px
+
+	&__click
+		display: flex
+		text-transform: uppercase
+		text-decoration: underline
+		font-size: 18px
+		font-family: $title
+		line-height: 1
+		font-weight: 700
+
+		span
+			content: ''
+			display: block
+			margin-right: 10px
+			width: 20px
+			height: 20px
+			border-bottom: 11px solid transparent
+			border-left: 17px solid transparent
+			border-right: 17px solid $accent
+			border-top: 11px solid transparent
+			transition: all .6s
+
+		&:hover,
+		&:focus
+			text-decoration: underline
+
+			span
+				border-right: 17px solid $red
+
+	&--two
+
+		.step
+			&__container
+				padding-bottom: 90px
+
+			&__btn
+				margin-bottom: 125px
+
+			&__sub-title
+				right: auto
+				left: 0
+				bottom: 0
+
+		h2
+			margin-bottom: 30px
+
+		p
+			margin-bottom: 65px
+
+		ul
+			margin-bottom: 70px
+
+		&__img
+			right: auto
+			left: 100px
+
+		&__number
+			margin-right: 0
+			text-align: left
+			margin-left: 100px
+
+		&__click
+			justify-content: flex-end
+
+			span
+				border-bottom: 11px solid transparent
+				border-left: 17px solid $accent
+				border-right: 17px solid transparent
+				border-top: 11px solid transparent
+				margin-left: 10px
+				margin-right: 0
+
+			&:hover,
+			&:focus
+
+				span
+					border-left: 17px solid $red
+					border-right: 17px solid transparent
+
+	&--three
+		.container
+			padding-top: 190px
+
+		ul
+			margin-bottom: 120px
+	
+	&--four
+
+		ul
+			margin-bottom: 65px
+			
+		.step
+			&__container
+				padding-bottom: 220px
+
+			&__btn
+				margin-bottom: 0
+
+			&__sub-title
+				right: auto
+				left: 0
+				bottom: 0
+
+
+.contacts
+
+	iframe
+		height: 700px
+		width: 100%
+	
+	&__container
+		padding-top: 110px
+
+	&__block
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		margin-bottom: 120px
+
+	&__info
+		position: relative
+		padding-left: 90px
+
+		h3
+			position: absolute
+			left: -40px
+			top: 45px
+			transform: rotate(-90deg)
+
+		p
+			margin-bottom: 25px
+
+			&:last-child
+				margin-bottom: 0
+
+	&__btn
+		border: 1px solid $accent
+		background-color: #fff
+
+		&:hover,
+		&:focus
+			background-color: $accent
+
+
+.footer
+	line-height: 1
+	color: #fff
+	font-size: 16px
+
+	a
+		color: #fff
+
+		&:hover,
+		&:focus
+			color: $red
+
+	&__container
+		display: flex
+		justify-content: space-between
+		background-color: $accent
+		padding: 65px 30px
+
+
+@import "media" // Always at the end

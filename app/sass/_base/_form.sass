@@ -1,0 +1,48 @@
+.form
+
+	input
+		color: $text
+		height: 50px
+		line-height: 50px
+
+		&::placeholder
+			color: #9c9c9c
+			line-height: 50px
+
+	&__line
+		position: relative
+		margin-bottom: 10px
+
+		&:last-child
+			margin-bottom: 0
+
+
+	label.error
+		position: absolute
+		bottom: -25px
+		right: 25px
+		left: 25px
+		transition: all .3s
+		animation: error .3s linear 1 forwards
+		color: #fff
+		text-align: center
+		font-weight: 600
+		background-color: red
+		border-radius: 10px
+		font-size: 14px
+
+		&::before
+			content: ''
+			position: absolute
+			left: 50%
+			top: -8px
+			transform: translate(-50%, 0)
+			border-bottom: 4px solid red
+			border-left: 4px solid transparent
+			border-right: 4px solid transparent
+			border-top: 4px solid transparent
+
+
+
+
+

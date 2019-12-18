@@ -1,0 +1,156 @@
+
+//----------------------fonts---------------------
+$fonts: 'Gilroy', sans-serif
+$title: 'Oswald', sans-serif
+//---------------------end-fonts---------------------
+
+//----------------------color---------------------
+$accent: #132651
+$text: #252525
+
+$red: #f16876
+$gray: #f3f4f8
+//---------------------end-color---------------------
+
+body
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	font-family: $fonts
+	font-size: 16px
+	color: $text
+	line-height: 1.4
+	font-weight: 400
+
+::selection
+	background-color: $accent
+	color: #fff
+
+a, div, ul, li, input, textarea
+	&:hover,
+	&:focus
+		outline: none
+
+h1, h2, h3, h4, h5, h6
+	font-weight: 700
+	line-height: 1.3
+	margin: 0
+	padding: 0
+	text-transform: uppercase
+	font-family: $title
+	color: $accent
+
+	span
+		font-weight: 400
+		color: $accent
+
+h1
+	font-size: 55px
+	text-align: right
+	margin-right: 60px
+
+h2
+	font-size: 42px
+	margin-bottom: 20px
+
+h3
+	font-size: 24px
+	margin-bottom: 10px
+
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+input, textarea
+	border: none
+	border-bottom: 1px solid #c3c3c3
+	outline: none
+	box-shadow: none
+	-webkit-appearance: none
+	background-color: transparent
+	padding: 0 20px
+	color: $text
+	width: 100%
+	font-size: 20px
+	transition: all .6s
+	
+	&:focus:required:invalid
+		border-color: $accent
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&:required:valid
+		border-color: green
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&::placeholder
+		color: #a6a6a6
+		font-size: 20px
+		line-height: 40px
+
+textarea
+	resize: none
+	padding-top: 10px
+	line-height: 1.4
+
+	&::placeholder
+		line-height: 1.4
+
+sub, sup
+	font-size: 60%
+
+
+b, strong
+	font-weight: 700
+
+p
+	margin: 0
+	padding: 0
+
+a,
+a:focus,
+a:hover
+	outline: none
+	text-decoration: none
+	transition: all .6s
+
+a
+	color: $accent
+
+	&:hover,
+	&:focus
+		color: $red
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button 
+	-webkit-appearance: none
+	margin: 0
+
+
+input[type="number"]
+	-moz-appearance: textfield
+
+input[type="number"]:hover,
+input[type="number"]:focus
+	-moz-appearance: number-input
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+.no-scroll
+	overflow: hidden
+	
+	
+
+@import "_base/animation"
+@import "_base/btn"
+@import "_base/form"
+@import "_base/modal"

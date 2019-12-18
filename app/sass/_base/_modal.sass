@@ -1,0 +1,53 @@
+.modal
+	position: relative
+	max-width: 480px
+	width: 100%
+	height: auto
+	padding: 50px
+	background-color: #fff
+	z-index: 1
+	transform: scale(0.8)
+
+	&__close
+		position: absolute
+		right: 15px
+		top: 15px
+		display: block
+		width: 36px
+		height: 36px
+		background-color: transparent
+		border: none
+		cursor: pointer
+		transition: all .6s
+		border: 2px solid $accent
+		border-radius: 50%
+
+		&:hover, &:focus
+			outline: none
+			transform: rotate(90deg)
+			border-color: #d25e5e
+
+			span
+				background-color: #d25e5e
+
+		span
+			display: block
+			position: absolute
+			left: 50%
+			top: 50%
+			background: $accent
+			transition: all .6s
+			border-radius: 4px
+			height: 18px
+			width: 2px
+
+			&:first-child
+				transform: translate(-50%, -50%) rotate(45deg)
+
+			&:last-child
+				transform: translate(-50%, -50%) rotate(-45deg)
+	
+
+
+.popup_visible .modal
+	transform: scale(1)
