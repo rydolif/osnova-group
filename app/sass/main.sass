@@ -128,6 +128,7 @@
 			fill: $accent
 			transition: all .6s
 
+
 .hero
 	background-image: url(../img/hero.png)
 	background-size: cover
@@ -308,7 +309,6 @@
 			line-height: 2
 			font-weight: 700
 
-
 		ol, ul
 			padding-left: 30px
 			margin-bottom: 15px
@@ -327,9 +327,10 @@
 					position: relative
 
 					&::before
+						// content: counter(wslist2) "."
+						// counter-increment: wslist2
+
 						color: #fff
-						content: counter(wslist2) "."
-						counter-increment: wslist2
 						display: inline-block
 						left: -27px
 						position: absolute
@@ -551,5 +552,39 @@
 		background-color: $accent
 		padding: 40px 30px
 
+
+.step__info
+	ol
+		ounter-reset: num
+
+	li
+		counter-increment: num
+
+	li::before
+		content: counter(num)
+		color: #fff
+		display: inline-block
+		left: -27px
+		position: absolute
+		text-align: center
+		top: 0
+
+	ol ol
+		counter-reset: num2
+		list-style-type: none
+
+	ol ol > li
+		counter-increment: num2
+	ol ol > li::before
+		content: counter(num) '.' counter(num2)
+
+	ol ol ol
+		counter-reset: num3
+
+	ol ol ol > li
+		counter-increment: num3
+
+	ol ol ol > li::before
+		content: counter(num) '.' counter(num2) '.' counter(num3)
 
 @import "media" // Always at the end
